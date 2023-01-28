@@ -13,7 +13,7 @@ The objective of this project is to create a Pokédex application that allows us
   - Height
   - Weight
   - Type
-  - Moves
+  - Moves (limit to first 5 moves)
 
 ## Functionality
 
