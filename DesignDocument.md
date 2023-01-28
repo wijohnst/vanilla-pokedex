@@ -1,5 +1,8 @@
 # Design Document
 
+<img width="536" alt="Screen Shot 2023-01-28 at 10 03 19 AM" src="https://user-images.githubusercontent.com/12022922/215273683-02afb791-9791-4624-bfe5-157a50e41238.png">
+_Pictured, a Pokédex_
+
 ## Objective
 
 The objective of this project is to create a Pokédex application that allows users to easily search for and view information about different Pokemon
