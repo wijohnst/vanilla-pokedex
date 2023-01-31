@@ -28,4 +28,5 @@ _The Conventional Commit template after being filled out with all mandatory info
 
 ## Running Locally
 
-``` npm run start ```
+```bash
+npm run start
