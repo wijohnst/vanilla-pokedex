@@ -25,3 +25,8 @@ _The Conventional Commit template before adding content, viewed in Vim editor_
 <img width="703" alt="Screen Shot 2023-01-28 at 12 53 16 PM" src="https://user-images.githubusercontent.com/12022922/215283102-a989033d-1ef6-4c88-be1d-24eed49ba618.png">
 
 _The Conventional Commit template after being filled out with all mandatory information_
+
+## Running Locally
+
+```bash
+npm run start
