@@ -28,4 +28,4 @@ _The Conventional Commit template after being filled out with all mandatory info
 
 ## Running Locally
 
-No idea what to write here, please help? 
+``` npm run start ```
