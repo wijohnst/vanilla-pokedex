@@ -6,7 +6,7 @@
   "scripts": {
     "start": "parcel src/index.html",
     "lint": "eslint --ignore-path .eslintignore --ext .js, .",
- "lint:fix": "eslint --ignore-path .eslintignore --ext .js, . --fix"
+    "lint:fix": "eslint --ignore-path .eslintignore --ext .js, . --fix"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
   "homepage": "https://github.com/wijohnst/vanilla-pokedex#readme",
   "devDependencies": {
     "eslint": "^8.33.0",
-    "parcel": "^2.8.3"
+    "parcel": "^2.8.3",
+    "prettier": "2.8.3"
   }
 }
