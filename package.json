@@ -6,7 +6,8 @@
   "scripts": {
     "start": "parcel src/index.html",
     "lint": "eslint --ignore-path .eslintignore --ext .js, .",
-    "lint:fix": "eslint --ignore-path .eslintignore --ext .js, . --fix"
+    "lint:fix": "eslint --ignore-path .eslintignore --ext .js, . --fix", 
+    "prettier": "prettier --write ."
   },
   "repository": {
     "type": "git",
