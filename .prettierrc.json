@@ -1,3 +1,5 @@
 {
-    "echo": {"singleQutore": true}
+   {
+     "singleQuote": true
+   }
 }
