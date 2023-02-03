@@ -1,5 +1,1 @@
-console.log("Search a Pokemon");
-
-//test hello
-
-console.log("hello");
+console.log('Search a Pokemon');
