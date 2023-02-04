@@ -4,7 +4,9 @@
   "description": "A Pokédex implemented in HTML, CSS, and vanilla JavaScript",
   "main": "index.js",
   "scripts": {
-    "start": "parcel src/index.html"
+    "start": "parcel src/index.html", 
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "repository": {
     "type": "git",
@@ -18,6 +20,7 @@
   },
   "homepage": "https://github.com/wijohnst/vanilla-pokedex#readme",
   "devDependencies": {
+    "jest": "^29.4.1",
     "parcel": "^2.8.3"
   }
 }
