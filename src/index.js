@@ -1,1 +1,1 @@
-console.log("Search a Pokemon");
+console.log('Search a Pokemon');
