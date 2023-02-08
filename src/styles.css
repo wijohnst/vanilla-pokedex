@@ -1,3 +1,14 @@
+:root {
+  --poke-red: #e15c6a;
+  --poke-blue: #859dcd;
+  --poke-green: #8cbd6b;
+  --poke-yellow: #f5e277;
+  --poke-black: #545357;
+  --poke-gray: #d2d5cd;
+  --poke-dark-red: #b83129;
+  --poke-white: #ffffff;
+}
+
 body {
   background: #e15c6a;
 }
