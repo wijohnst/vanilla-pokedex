@@ -12,3 +12,44 @@
 body {
   background: #e15c6a;
 }
+
+input,
+select {
+  font-family: 'Fira Mono', monospace;
+  font-weight: 500;
+  background-color: var(--poke-white);
+  color: var(--poke-black);
+  border: 2px solid #545357;
+  border-radius: 10px;
+  font-size: 32px;
+  line-height: 38px;
+}
+
+input {
+  color: var(--poke-gray);
+  width: 569px;
+  height: 76px;
+  padding-left: 1.2rem;
+}
+
+input placeholder {
+  color: var(--poke-gray);
+}
+
+select {
+  width: 200px;
+  height: 76px;
+  padding-left: 1.6rem;
+}
+
+.go-button {
+  border-radius: 50%;
+  height: 93px;
+  width: 93px;
+  background-color: var(--poke-green);
+  font-family: 'Fira Mono', monospace;
+  font-weight: 500;
+  font-size: 32px;
+  color: var(--poke-black);
+  border: 0;
+}

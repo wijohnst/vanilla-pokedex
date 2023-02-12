@@ -14,7 +14,14 @@
     <title>Pokedex</title>
   </head>
   <body>
-    Pokedex
+    <form>
+    <input type="text" placeholder="Find Pokémon by Name"></input>
+    <select name="criteria" id="search-option">
+      <option value="name">Name</option>
+      <option value="id">Id</option>
+  </select>
+  <button class="go-button" type="submit">GO!</button>
+  </form>
     <script src="index.js" type="module"></script>
   </body>
 </html>
