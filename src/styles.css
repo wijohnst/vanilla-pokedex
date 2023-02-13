@@ -78,8 +78,7 @@ summary,
 time,
 mark,
 audio,
-video,
-input {
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -159,6 +158,10 @@ input {
   width: 569px;
   height: 76px;
   padding-left: 1.2rem;
+}
+
+.search-input {
+  box-sizing: border-box;
 }
 
 input::placeholder {
