@@ -139,11 +139,8 @@ body {
   background: #e15c6a;
 }
 
-#searchbar {
-}
-
-input,
-select {
+.main-search {
+  box-sizing: border-box;
   font-family: 'Fira Mono', monospace;
   font-weight: 500;
   background-color: var(--poke-white);
@@ -153,22 +150,18 @@ select {
   line-height: 38px;
 }
 
-input {
+#search-input {
   color: var(--poke-gray);
   width: 569px;
   height: 76px;
   padding-left: 1.2rem;
 }
 
-.search-input {
-  box-sizing: border-box;
-}
-
-input::placeholder {
+#search-input::placeholder {
   color: var(--poke-gray);
 }
 
-select {
+#search-option {
   width: 200px;
   height: 76px;
   text-align: center;
