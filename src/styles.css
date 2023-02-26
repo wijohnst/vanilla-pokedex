@@ -150,6 +150,13 @@ body {
   line-height: 38px;
 }
 
+#error-span {
+  color: var(--poke-dark-red);
+  font-family: 'Fira Mono', monospace;
+  font-weight: 500;
+  margin-left: 15px;
+}
+
 #search-input {
   color: var(--poke-gray);
   width: 569px;
