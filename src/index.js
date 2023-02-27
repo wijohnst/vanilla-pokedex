@@ -55,5 +55,3 @@ goButton?.addEventListener('click', (e) => {
     getPokemon(inputElement.value);
   }
 });
-
-//getPokemon('pikachu');
