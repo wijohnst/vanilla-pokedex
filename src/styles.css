@@ -206,7 +206,7 @@ body {
   border-radius: 10px;
   width: 554px;
   height: 386px;
-  display: block;
+  display: none;
   padding: 10px;
 }
 
