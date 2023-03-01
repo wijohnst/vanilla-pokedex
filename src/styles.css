@@ -180,3 +180,50 @@ body {
   border: 0;
   margin-left: 10px;
 }
+
+#empty-pokemon-details {
+  box-sizing: border-box;
+  background-color: var(--poke-green);
+  font-family: 'VT323';
+  font-weight: 400;
+  font-size: 48px;
+  border: 2px solid #545357;
+  border-radius: 10px;
+  width: 554px;
+  height: 386px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#filled-pokemon-details {
+  box-sizing: border-box;
+  background-color: var(--poke-green);
+  font-family: 'VT323';
+  font-weight: 400;
+  font-size: 48px;
+  border: 2px solid #545357;
+  border-radius: 10px;
+  width: 554px;
+  height: 386px;
+  display: block;
+  padding: 20px;
+}
+
+#details-table {
+  font-size: 24px;
+  width: 95%;
+}
+
+.poke-table-data {
+  font-size: 18px;
+  text-align: center;
+  border: 2px solid #000000;
+  border-radius: 50px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.main-details-table {
+  margin-bottom: 0px;
+}

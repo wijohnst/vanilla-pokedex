@@ -14,15 +14,51 @@
     <title>Pokedex</title>
   </head>
   <body>
-    
     <form>
-    <input class="main-search" id="search-input" type="text" placeholder="Find Pokémon by Name"></input>
-    <select class="main-search" name="criteria" id="search-option">
-      <option value="name">Name</option>
-      <option value="id">Id</option>
-  </select>
-  <button class="go-button" type="submit">GO!</button>
-  </form>
+      <input
+        class="main-search"
+        id="search-input"
+        type="text"
+        placeholder="Find Pokémon by Name"
+      />
+      <select class="main-search" name="criteria" id="search-option">
+        <option value="name">Name</option>
+        <option value="id">Id</option>
+      </select>
+      <button class="go-button" type="submit">GO!</button>
+    </form>
+
+    <!--Empty Box before search-->
+    <section id="empty-pokemon-details">
+      <h2>No Details Available</h2>
+    </section>
+
+    <!--Filled Box after search-->
+    <section id="filled-pokemon-details">
+      <h2 class="details-heading">Stats</h2>
+      <br />
+      <table id="details-table">
+        <tr>
+          <th>Height</th>
+          <th>Weight</th>
+          <th>Type</th>
+        </tr>
+        <tr class="main-details-table">
+          <td class="poke-table-data">6"</td>
+          <td class="poke-table-data">75 kg.</td>
+          <td class="poke-table-data">Fairy</td>
+        </tr>
+      </table>
+
+      <h2>Moves</h2>
+      <ul class="poke-moves">
+        <li>Pound</li>
+        <li>Double Slap</li>
+        <li>Mega-Punch</li>
+        <li>Fire-Punch</li>
+        <li>Ice Punch</li>
+      </ul>
+    </section>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
