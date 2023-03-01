@@ -46,7 +46,6 @@ function getPokemon(name) {
 
 //pressing GO executes function or error validation
 goButton?.addEventListener('click', (e) => {
-  console.log('click');
   e.preventDefault();
   errorSpan.innerHTML = '';
   if (inputElement.value === '') {
