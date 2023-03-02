@@ -14,7 +14,6 @@ function getPokemon(name) {
   axios
     .get('https://pokeapi.co/api/v2/pokemon/' + name)
     .then((res) => {
-      console.log(res.data);
       //removes blank details element
       blankDetails.style.display = 'none';
 
@@ -25,9 +24,28 @@ function getPokemon(name) {
 
       //tests
       console.log(pokemonMoves);
-
-      movesArray.innertext = '...pokemonMoves';
       console.log(movesArray);
+
+      function moveLooper(pokemonMoves) {
+        const listContainer = document.getElementById('poke-moves');
+        const listItems = [...pokemonMoves];
+
+        for (let i = 0; i < 5; i++) {
+          const listItem = document.createElement('li');
+
+          if (listItems[i]) {
+            const listItemText = document.createTextNode(listItems[i]);
+            listItem.appendChild(listItemText);
+          }
+
+          listContainer.appendChild(listItem);
+        }
+
+        document.body.appendChild(listContainer);
+      }
+
+      moveLooper(pokemonMoves);
+
       //adds filled details element
       filledDetails.style.display = 'block';
     })
