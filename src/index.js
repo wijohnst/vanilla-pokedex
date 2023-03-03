@@ -8,7 +8,6 @@ const form = document.getElementById('search-form');
 const input = document.getElementById('search-input');
 const blankDetails = document.getElementById('empty-pokemon-details');
 const filledDetails = document.getElementById('filled-pokemon-details');
-let movesArray = document.getElementsByClassName('poke-move');
 
 function getPokemon(name) {
   axios
@@ -22,29 +21,45 @@ function getPokemon(name) {
         .slice(0, 5)
         .map((move) => move.move.name);
 
-      //tests
-      console.log(pokemonMoves);
-      console.log(movesArray);
+      //Add height to table
+      let pokeHeightValue = res.data.height;
+      let HeightInTable = document.getElementById('poke-height');
+      HeightInTable.innerHTML = pokeHeightValue + '"';
 
-      function moveLooper(pokemonMoves) {
-        const listContainer = document.getElementById('poke-moves');
-        const listItems = [...pokemonMoves];
+      //Add weight to table
+      let pokeWeightValue = res.data.weight;
+      let WeightinTable = document.getElementById('poke-weight');
+      WeightinTable.innerHTML = pokeWeightValue + ' kg';
 
-        for (let i = 0; i < 5; i++) {
-          const listItem = document.createElement('li');
+      //Add pokemon type to table
+      let pokeTypeValue = res.data.types[0].type.name;
+      let TypeInTable = document.getElementById('poke-type');
+      TypeInTable.innerHTML = pokeTypeValue;
 
-          if (listItems[i]) {
-            const listItemText = document.createTextNode(listItems[i]);
-            listItem.appendChild(listItemText);
-          }
+      //Add move1 to DOM
+      let pokeMove1 = pokemonMoves[0];
+      let ListMove1 = document.getElementById('poke-move-1');
+      ListMove1.innerHTML = pokeMove1;
 
-          listContainer.appendChild(listItem);
-        }
+      //Add move2 to DOM
+      let pokeMove2 = pokemonMoves[1];
+      let ListMove2 = document.getElementById('poke-move-2');
+      ListMove2.innerHTML = pokeMove2;
 
-        document.body.appendChild(listContainer);
-      }
+      //Add move3 to DOM
+      let pokeMove3 = pokemonMoves[2];
+      let ListMove3 = document.getElementById('poke-move-3');
+      ListMove3.innerHTML = pokeMove3;
 
-      moveLooper(pokemonMoves);
+      //Add move4 to DOM
+      let pokeMove4 = pokemonMoves[3];
+      let ListMove4 = document.getElementById('poke-move-4');
+      ListMove4.innerHTML = pokeMove4;
+
+      //Add move5 to DOM
+      let pokeMove5 = pokemonMoves[4];
+      let ListMove5 = document.getElementById('poke-move-5');
+      ListMove5.innerHTML = pokeMove5;
 
       //adds filled details element
       filledDetails.style.display = 'block';
