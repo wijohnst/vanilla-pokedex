@@ -124,6 +124,11 @@ table {
   border-spacing: 0;
 }
 
+html,
+body {
+  box-sizing: border-box;
+}
+
 :root {
   --poke-red: #e15c6a;
   --poke-blue: #859dcd;
@@ -140,7 +145,6 @@ body {
 }
 
 .main-search {
-  box-sizing: border-box;
   font-family: 'Fira Mono', monospace;
   font-weight: 500;
   background-color: var(--poke-white);
@@ -182,7 +186,6 @@ body {
 }
 
 #empty-pokemon-details {
-  box-sizing: border-box;
   background-color: var(--poke-green);
   font-family: 'VT323';
   font-weight: 400;
@@ -197,7 +200,6 @@ body {
 }
 
 #filled-pokemon-details {
-  box-sizing: border-box;
   background-color: var(--poke-green);
   font-family: 'VT323';
   font-weight: 400;

@@ -1,5 +1,3 @@
-/* ß */
-
 //DOM selectors
 const form = document.getElementById('search-form');
 const input = document.getElementById('search-input');
@@ -25,8 +23,8 @@ function getPokemon(name) {
 
       //Add weight to table
       let pokeWeightValue = res.data.weight;
-      let WeightinTable = document.getElementById('poke-weight');
-      WeightinTable.innerHTML = pokeWeightValue + ' kg';
+      let WeightInTable = document.getElementById('poke-weight');
+      WeightInTable.innerHTML = `${pokeWeightValue} kg`;
 
       //Add pokemon type to table
       let pokeTypeValue = res.data.types[0].type.name;
