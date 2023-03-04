@@ -4,13 +4,9 @@
 } */
 
 //DOM selectors
-const form = document.getElementById('search-form');
-const input = document.getElementById('search-input');
+
 const blankDetails = document.getElementById('empty-pokemon-details');
 const filledDetails = document.getElementById('filled-pokemon-details');
-} 
-
-//DOM selectors
 const selectElement = document.getElementById('search-option');
 const inputElement = document.querySelector('input[id="search-input"]');
 const errorSpan = document.getElementById('error-span');
@@ -23,7 +19,8 @@ selectElement?.addEventListener('change', (e) => {
     inputElement.placeholder = 'Find Pokémon by Id';
   } else if (selectedOption.value === 'name') {
     inputElement.placeholder = 'Find Pokémon by Name';
-  });
+  }
+});
 
 //Use axios to get pokemon response object
 function getPokemon(name) {
