@@ -14,19 +14,55 @@
     <title>Pokedex</title>
   </head>
   <body>
-    
-    <form>
-    <input class="main-search" id="search-input" type="text" required placeholder="Find Pokémon by Name"></input>
-    
-    <select class="main-search" name="criteria" id="search-option">
-      <option value="name">Name</option>
-      <option value="id">Id</option>
-  </select>
+    <form id="search-form">
+      <input
+        class="main-search"
+        id="search-input"
+        type="text"
+        required
+        placeholder="Find Pokémon by Name"
+      />
 
-  <button class="go-button" type="submit">GO!</button>
-  </form>
+      <select class="main-search" name="criteria" id="search-option">
+        <option value="name">Name</option>
+        <option value="id">Id</option>
+      </select>
 
-  <span id="error-span"></span>
+      <button class="go-button" type="submit">GO!</button>
+    </form>
+    <span id="error-span"></span>
+
+    <!--Empty Box before search-->
+    <section id="empty-pokemon-details">
+      <h2>No Details Available</h2>
+    </section>
+
+    <!--Filled Box after search-->
+    <section id="filled-pokemon-details">
+      <h2 class="details-heading">Stats</h2>
+      <br />
+      <table id="details-table">
+        <tr>
+          <th>Height</th>
+          <th>Weight</th>
+          <th>Type</th>
+        </tr>
+        <tr>
+          <td class="heigh-weight-type" id="poke-height">6"</td>
+          <td class="heigh-weight-type" id="poke-weight">75 kg.</td>
+          <td class="heigh-weight-type" id="poke-type">Fairy</td>
+        </tr>
+      </table>
+
+      <h2 class="details-heading">Moves</h2>
+      <ul class="poke-moves">
+        <li id="poke-move-1">Pay-Day</li>
+        <li id="poke-move-2">Double Slap</li>
+        <li id="poke-move-3">Mega-Punch</li>
+        <li id="poke-move-4">Fire-Punch</li>
+        <li id="poke-move-5">Ice Punch</li>
+      </ul>
+    </section>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
