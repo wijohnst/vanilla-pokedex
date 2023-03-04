@@ -1,9 +1,31 @@
+/* if (process.env.NODE_ENV === 'development') {
+  const { worker } = require('./mocks/browser');
+  worker.start();
+} */
+
 //DOM selectors
 const form = document.getElementById('search-form');
 const input = document.getElementById('search-input');
 const blankDetails = document.getElementById('empty-pokemon-details');
 const filledDetails = document.getElementById('filled-pokemon-details');
+} 
 
+//DOM selectors
+const selectElement = document.getElementById('search-option');
+const inputElement = document.querySelector('input[id="search-input"]');
+const errorSpan = document.getElementById('error-span');
+const goButton = document.querySelector('button[class="go-button"]');
+
+//Dynamic Placeholder Text
+selectElement?.addEventListener('change', (e) => {
+  const selectedOption = selectElement.options[selectElement.selectedIndex];
+  if (selectedOption.value === 'id') {
+    inputElement.placeholder = 'Find Pokémon by Id';
+  } else if (selectedOption.value === 'name') {
+    inputElement.placeholder = 'Find Pokémon by Name';
+  });
+
+//Use axios to get pokemon response object
 function getPokemon(name) {
   axios
     .get('https://pokeapi.co/api/v2/pokemon/' + name)
@@ -79,9 +101,13 @@ function getPokemon(name) {
     });
 }
 
-//Event listener that calls getPokemon
-form?.addEventListener('submit', (e) => {
+//pressing GO executes function or error validation
+goButton?.addEventListener('click', (e) => {
   e.preventDefault();
-  const inputValue = input.value;
-  getPokemon(inputValue);
+  errorSpan.innerHTML = '';
+  if (inputElement.value === '') {
+    errorSpan.innerHTML = 'Please enter a Pokemon Name or ID';
+  } else {
+    getPokemon(inputElement.value);
+  }
 });

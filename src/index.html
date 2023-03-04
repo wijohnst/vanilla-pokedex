@@ -19,14 +19,18 @@
         class="main-search"
         id="search-input"
         type="text"
+        required
         placeholder="Find Pokémon by Name"
       />
+
       <select class="main-search" name="criteria" id="search-option">
         <option value="name">Name</option>
         <option value="id">Id</option>
       </select>
+
       <button class="go-button" type="submit">GO!</button>
     </form>
+    <span id="error-span"></span>
 
     <!--Empty Box before search-->
     <section id="empty-pokemon-details">
