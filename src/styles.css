@@ -192,6 +192,42 @@ body {
   margin-left: 10px;
 }
 
+#main-display {
+  display: flex;
+}
+
+#image-outer-box {
+  background-color: var(--poke-gray);
+  width: 525px;
+  height: 367px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#image-inner-box {
+  background-color: var(--poke-black);
+  width: 477px;
+  height: 308px;
+  border-radius: 10px;
+}
+
+#poke-name {
+  font-family: 'VT323';
+  font-weight: 400;
+  font-size: 48px;
+  color: var(--poke-green);
+  padding: 15px;
+}
+
+#poke-image {
+  width: 198px;
+  height: 198px;
+  margin: 10px 120px;
+  display: none;
+}
+
 #empty-pokemon-details {
   background-color: var(--poke-green);
   font-family: 'VT323';
@@ -247,4 +283,48 @@ body {
   margin-left: 30px;
   font-size: 18px;
   list-style: inside;
+}
+
+img:hover {
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 0.5s;
+
+  /* When the animation is finished, start again */
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
 }
