@@ -111,13 +111,16 @@ function getPokemon(name) {
 
         if (err.response.status === 404) {
           console.log('No Pokemon found, try again');
+          errorSpan.innerHTML = 'No Pokemon found, try again';
         }
       } else if (err.request) {
         //request made, no response
         console.error(err.request);
+        errorSpan.innerHTML = 'No Pokemon found, try again';
       } else {
         //any other err, display err message
         console.error(err.message);
+        errorSpan.innerHTML = 'No Pokemon found, try again';
       }
     });
 }
@@ -129,6 +132,6 @@ goButton?.addEventListener('click', (e) => {
   if (inputElement.value === '') {
     errorSpan.innerHTML = 'Please enter a Pokemon Name or ID';
   } else {
-    getPokemon(inputElement.value);
+    getPokemon(inputElement.value.toLowerCase().trim());
   }
 });
