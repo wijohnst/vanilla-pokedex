@@ -14,6 +14,14 @@
     <title>Pokedex</title>
   </head>
   <body>
+    
+    <h1>PokéSearch</h1>
+    <div class="blue-ellipse"></div>
+    <div class="red-ellipse"></div>
+    <div class="yellow-ellipse"></div>
+    <div class="green-ellipse"></div>
+
+    <div id="top-bar">
     <form id="search-form">
       <input
         class="main-search"
@@ -33,21 +41,32 @@
     <span id="error-span"></span>
 
   </br>
+</div>
 
   <div id="main-display">
+
+    <!--Left Side-->
+    <div class="big-border">
   <section id="image-outer-box">
     <div id="image-inner-box">
       <h2 id="poke-name">No Image Found</h2>
       <img id="poke-image" src="">
     </div>
   </section>
+  <section id="details-rectangle">Details</section>
 
+</div>
+
+<!--Right Side-->
     <!--Empty Box before search-->
+    <div class="big-border">
     <section id="empty-pokemon-details">
       <h2>No Details Available</h2>
     </section>
+  
 
     <!--Filled Box after search-->
+    
     <section id="filled-pokemon-details">
       <h2 class="details-heading">Stats</h2>
       <br />
@@ -73,8 +92,18 @@
         <li id="poke-move-5">Ice Punch</li>
       </ul>
     </section>
+    <div id="decor">
+    <section id="blue-box"></section>
+    <section id="two-box">
+      <div class="grey-box"></div>
+      <div class="spacer"></div>
+      <div class="grey-box"></div>
+    </div>
+    </section>
+  
 
   </div>
+</div>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
