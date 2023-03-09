@@ -141,7 +141,65 @@ body {
 }
 
 body {
-  background: #e15c6a;
+  background: linear-gradient(
+    to bottom,
+    var(--poke-red) 180px,
+    var(--poke-dark-red) 100px
+  );
+}
+
+h1 {
+  font-family: 'Fira Mono', monospace;
+  font-weight: 500;
+  font-size: 32px;
+  color: #545357;
+  margin-left: 450px;
+  margin-top: 10px;
+}
+
+#top-bar {
+  display: flex;
+  margin-left: 450px;
+}
+
+.blue-ellipse {
+  position: absolute;
+  width: 135px;
+  height: 135px;
+  left: 30px;
+  top: 20px;
+  background: var(--poke-blue);
+  border-radius: 50%;
+}
+
+.red-ellipse {
+  position: absolute;
+  width: 43px;
+  height: 43px;
+  left: 180px;
+  top: 15px;
+  background: var(--poke-dark-red);
+  border-radius: 50%;
+}
+
+.yellow-ellipse {
+  position: absolute;
+  width: 43px;
+  height: 43px;
+  left: 235px;
+  top: 15px;
+  background: var(--poke-yellow);
+  border-radius: 50%;
+}
+
+.green-ellipse {
+  position: absolute;
+  width: 43px;
+  height: 43px;
+  left: 290px;
+  top: 15px;
+  background: var(--poke-green);
+  border-radius: 50%;
 }
 
 .main-search {
@@ -152,6 +210,7 @@ body {
   border-radius: 10px;
   font-size: 32px;
   line-height: 38px;
+  box-sizing: border-box;
 }
 
 #error-span {
@@ -194,6 +253,19 @@ body {
 
 #main-display {
   display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  margin-top: 50px;
+  height: 800px;
+  width: 100%;
+}
+
+.big-border {
+  background-color: var(--poke-red);
+  display: block;
+  padding: 35px;
+  margin: 30px;
+  height: 90%;
 }
 
 #image-outer-box {
@@ -211,6 +283,22 @@ body {
   width: 477px;
   height: 308px;
   border-radius: 10px;
+}
+
+#details-rectangle {
+  width: 297px;
+  height: 124px;
+  background-color: var(--poke-green);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Fira Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 60px;
+  color: #545357;
+  margin: 60px auto;
 }
 
 #poke-name {
@@ -281,7 +369,7 @@ body {
 .poke-moves {
   margin-top: 5px;
   margin-left: 30px;
-  font-size: 18px;
+  font-size: 22px;
   list-style: inside;
 }
 
@@ -327,4 +415,29 @@ img:hover {
   100% {
     transform: translate(1px, -2px) rotate(-1deg);
   }
+}
+
+#blue-box {
+  background: #859dcd;
+  border-radius: 10px;
+  width: 438px;
+  height: 96px;
+  margin: 20px auto;
+}
+
+#two-box {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.spacer {
+  width: 20px;
+}
+
+.grey-box {
+  width: 160px;
+  height: 78px;
+  background: #545357;
+  border-radius: 10px;
 }
