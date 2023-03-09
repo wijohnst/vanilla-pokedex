@@ -132,6 +132,6 @@ goButton?.addEventListener('click', (e) => {
   if (inputElement.value === '') {
     errorSpan.innerHTML = 'Please enter a Pokemon Name or ID';
   } else {
-    getPokemon(inputElement.value.toLowerCase());
+    getPokemon(inputElement.value.toLowerCase().trim());
   }
 });
