@@ -373,6 +373,11 @@ h1 {
   list-style: inside;
 }
 
+.go-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(47, 139, 81, 0.9);
+}
+
 img:hover {
   /* Start the shake animation and make the animation last for 0.5 seconds */
   animation: shake 0.5s;
