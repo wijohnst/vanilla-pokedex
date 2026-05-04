@@ -11,103 +11,130 @@
       href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@500;700&family=VT323&display=swap"
       rel="stylesheet"
     />
-    <title>Pokedex</title>
+    <title>Pokédex</title>
   </head>
   <body>
-    
-    <h1>PokéSearch</h1>
-    <div class="blue-ellipse"></div>
-    <div class="red-ellipse"></div>
-    <div class="yellow-ellipse"></div>
-    <div class="green-ellipse"></div>
 
-    <div id="top-bar">
-    <form id="search-form">
-      <input
-        class="main-search"
-        id="search-input"
-        type="text"
-        required
-        placeholder="Find Pokémon by Name"
-      />
-
-      <select class="main-search" name="criteria" id="search-option">
-        <option value="name">Name</option>
-        <option value="id">Id</option>
-      </select>
-
-      <button class="go-button" type="submit">GO!</button>
-    </form>
-    
-
-  </br>
-</div>
-<span id="error-span"></span>
-
-  <div id="main-display">
-
-    <!--Left Side-->
-    <div class="big-border">
-  <section id="image-outer-box">
-    <div id="image-inner-box">
-      <h2 id="poke-name">No Image Found</h2>
-      <img id="poke-image">
+    <!-- Settings panel (fixed, toggled by green LED) -->
+    <div id="settings-panel">
+      <h3 class="settings-heading">Voice Settings</h3>
+      <label class="settings-label">Language
+        <select id="lang-select" class="settings-select"></select>
+      </label>
+      <label class="settings-label">Voice
+        <select id="voice-select" class="settings-select"></select>
+      </label>
+      <label class="settings-label">Rate <span id="rate-value">0.75</span>
+        <input id="rate-slider" class="settings-slider" type="range" min="0.1" max="2" step="0.05" value="0.75" />
+      </label>
+      <label class="settings-label">Pitch <span id="pitch-value">1</span>
+        <input id="pitch-slider" class="settings-slider" type="range" min="0" max="2" step="0.1" value="1" />
+      </label>
+      <label class="settings-label">Volume <span id="volume-value">1</span>
+        <input id="volume-slider" class="settings-slider" type="range" min="0" max="1" step="0.05" value="1" />
+      </label>
     </div>
-  </section>
-  <section id="details-rectangle">Details</section>
 
-</div>
+    <!-- Pokédex device -->
+    <div id="pokedex">
 
-<!--Right Side-->
-    <!--Empty Box before search-->
-    <div class="big-border">
-    <section id="empty-pokemon-details">
-      <h2>No Details Available</h2>
-    </section>
-  
+      <!-- ── Header ───────────────────────────────────────────── -->
+      <header id="pokedex-header">
+        <div class="profile-section">
+          <img class="profile-pic" src="profile.jpg" alt="Guy Johnston" />
+          <p class="profile-name">Guy Johnston<br />Pokémon Trainer</p>
+        </div>
+        <h1>PokéSearch</h1>
+        <div class="led-group">
+          <div class="red-ellipse"></div>
+          <div class="yellow-ellipse"></div>
+          <div class="green-ellipse" id="settings-toggle" title="Voice Settings"></div>
+        </div>
+      </header>
 
-    <!--Filled Box after search-->
-    
-    <section id="filled-pokemon-details">
-      <h2 class="details-heading">Stats</h2>
-      <br />
-      <table id="details-table">
-        <tr>
-          <th>Height</th>
-          <th>Weight</th>
-          <th>Type</th>
-        </tr>
-        <tr>
-          <td class="heigh-weight-type" id="poke-height">6"</td>
-          <td class="heigh-weight-type" id="poke-weight">75 kg.</td>
-          <td class="heigh-weight-type" id="poke-type">Fairy</td>
-        </tr>
-      </table>
+      <!-- ── Search ────────────────────────────────────────────── -->
+      <div id="search-section">
+        <form id="search-form">
+          <input
+            class="main-search"
+            id="search-input"
+            type="text"
+            required
+            placeholder="Find Pokémon by Name"
+            autocomplete="off"
+            list="search-history"
+          />
+          <datalist id="search-history"></datalist>
+          <select class="main-search" name="criteria" id="search-option">
+            <option value="name">Name</option>
+            <option value="id">Id</option>
+            <option value="fuzzy">Fuzzy</option>
+          </select>
+          <button class="go-button" type="submit">GO!</button>
+        </form>
+        <span id="error-span"></span>
+      </div>
 
-      <h2 class="details-heading">Moves</h2>
-      <ul class="poke-moves">
-        <li id="poke-move-1">Pay-Day</li>
-        <li id="poke-move-2">Double Slap</li>
-        <li id="poke-move-3">Mega-Punch</li>
-        <li id="poke-move-4">Fire-Punch</li>
-        <li id="poke-move-5">Ice Punch</li>
-      </ul>
-    </section>
-    <div id="decor">
-    <section id="blue-box"></section>
-    <section id="two-box">
-      <div class="grey-box"></div>
-      <div class="spacer"></div>
-      <div class="grey-box"></div>
+      <!-- ── Screen ────────────────────────────────────────────── -->
+      <div id="screen-bezel">
+        <div id="screen-display">
+
+          <!-- Empty state -->
+          <div id="empty-pokemon-details">
+            <span>Choose a Pokémon</span>
+          </div>
+
+          <!-- Loaded state (always in DOM, revealed when empty state is hidden) -->
+          <div id="poke-screen-content">
+            <span id="poke-number">#---</span>
+            <div id="poke-image-wrapper">
+              <span id="speech-bubble"></span>
+              <img id="poke-image" alt="Pokémon sprite" />
+            </div>
+            <h2 id="poke-name"></h2>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Browse Controls ───────────────────────────────────── -->
+      <div id="browse-controls">
+        <button class="browse-button" id="browse-prev" type="button" disabled>&#9664;</button>
+        <span id="browse-label">Browse All</span>
+        <button class="browse-button" id="browse-next" type="button">&#9654;</button>
+      </div>
+
+      <!-- ── Details ───────────────────────────────────────────── -->
+      <div id="filled-pokemon-details">
+        <div id="stats-row">
+          <div class="stat-block">
+            <span class="stat-label">Height</span>
+            <span class="stat-value" id="poke-height">—</span>
+          </div>
+          <div class="stat-block">
+            <span class="stat-label">Weight</span>
+            <span class="stat-value" id="poke-weight">—</span>
+          </div>
+          <div class="stat-block">
+            <span class="stat-label">Type</span>
+            <span class="stat-value" id="poke-type">—</span>
+          </div>
+        </div>
+        <div id="moves-section">
+          <h3 class="section-label">Moves</h3>
+          <ul class="poke-moves">
+            <li id="poke-move-1">—</li>
+            <li id="poke-move-2">—</li>
+            <li id="poke-move-3">—</li>
+            <li id="poke-move-4">—</li>
+            <li id="poke-move-5">—</li>
+          </ul>
+        </div>
+      </div>
+
     </div>
-    </section>
-  
-
-  </div>
-</div>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
     <script src="index.js" type="module"></script>
   </body>
 </html>

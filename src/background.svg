@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#010108"/>
+      <stop offset="45%"  stop-color="#05051a"/>
+      <stop offset="80%"  stop-color="#0a0d1f"/>
+      <stop offset="100%" stop-color="#060d0a"/>
+    </linearGradient>
+    <radialGradient id="moonGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#fffce0" stop-opacity="0.18"/>
+      <stop offset="50%"  stop-color="#fff8c0" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#fff8c0" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="horizonGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#1a3a10" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#1a3a10" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="moonBlur">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="1440" height="900" fill="url(#sky)"/>
+
+  <!-- Moon ambient glow -->
+  <ellipse cx="1100" cy="115" rx="300" ry="260" fill="url(#moonGlow)"/>
+
+  <!-- Moon -->
+  <circle cx="1100" cy="115" r="58" fill="#fdfae8" opacity="0.88"/>
+  <!-- Moon craters for detail -->
+  <circle cx="1086" cy="104" r="8"  fill="#f0e8b0" opacity="0.4"/>
+  <circle cx="1112" cy="128" r="5"  fill="#f0e8b0" opacity="0.3"/>
+  <circle cx="1098" cy="130" r="3"  fill="#f0e8b0" opacity="0.35"/>
+
+  <!-- Stars — varying sizes and opacities -->
+  <circle cx="42"   cy="38"  r="1.2" fill="#fff" opacity="0.9"/>
+  <circle cx="128"  cy="22"  r="0.8" fill="#fff" opacity="0.7"/>
+  <circle cx="210"  cy="55"  r="1.4" fill="#fff" opacity="0.85"/>
+  <circle cx="285"  cy="18"  r="0.9" fill="#fff" opacity="0.6"/>
+  <circle cx="360"  cy="44"  r="1.1" fill="#fff" opacity="0.8"/>
+  <circle cx="430"  cy="28"  r="0.7" fill="#fff" opacity="0.65"/>
+  <circle cx="510"  cy="60"  r="1.3" fill="#fff" opacity="0.75"/>
+  <circle cx="580"  cy="15"  r="1.0" fill="#fff" opacity="0.9"/>
+  <circle cx="650"  cy="48"  r="0.8" fill="#fff" opacity="0.6"/>
+  <circle cx="720"  cy="30"  r="1.5" fill="#fff" opacity="0.85"/>
+  <circle cx="800"  cy="70"  r="0.9" fill="#fff" opacity="0.7"/>
+  <circle cx="860"  cy="22"  r="1.1" fill="#fff" opacity="0.8"/>
+  <circle cx="930"  cy="55"  r="0.7" fill="#fff" opacity="0.6"/>
+  <circle cx="990"  cy="35"  r="1.2" fill="#fff" opacity="0.75"/>
+  <circle cx="1050" cy="72"  r="0.8" fill="#fff" opacity="0.5"/>
+  <circle cx="1160" cy="42"  r="1.0" fill="#fff" opacity="0.7"/>
+  <circle cx="1230" cy="18"  r="1.4" fill="#fff" opacity="0.85"/>
+  <circle cx="1300" cy="60"  r="0.9" fill="#fff" opacity="0.65"/>
+  <circle cx="1370" cy="30"  r="1.1" fill="#fff" opacity="0.8"/>
+  <circle cx="1410" cy="55"  r="0.7" fill="#fff" opacity="0.55"/>
+  <circle cx="75"   cy="90"  r="0.8" fill="#fff" opacity="0.5"/>
+  <circle cx="165"  cy="110" r="1.0" fill="#fff" opacity="0.6"/>
+  <circle cx="455"  cy="95"  r="0.9" fill="#fff" opacity="0.55"/>
+  <circle cx="635"  cy="88"  r="1.1" fill="#fff" opacity="0.65"/>
+  <circle cx="775"  cy="100" r="0.7" fill="#fff" opacity="0.5"/>
+  <circle cx="1020" cy="95"  r="1.2" fill="#fff" opacity="0.6"/>
+  <circle cx="1195" cy="85"  r="0.8" fill="#fff" opacity="0.55"/>
+  <circle cx="1340" cy="105" r="1.0" fill="#fff" opacity="0.6"/>
+
+  <!-- Distant town glow on horizon -->
+  <ellipse cx="400" cy="590" rx="180" ry="40" fill="url(#horizonGlow)"/>
+
+  <!-- Hill layer 1 — furthest, lightest -->
+  <path d="M0,600 C80,568 180,548 290,558 C400,568 470,582 570,565
+           C670,548 750,532 860,548 C970,564 1060,578 1160,562
+           C1260,546 1360,525 1440,535 L1440,900 L0,900 Z"
+        fill="#0e200e" opacity="0.85"/>
+
+  <!-- Hill layer 2 — mid distance -->
+  <path d="M0,660 C90,635 175,620 270,632 C365,644 420,655 510,640
+           C600,625 685,608 790,622 C895,636 975,652 1075,640
+           C1175,628 1310,605 1440,618 L1440,900 L0,900 Z"
+        fill="#0a160a" opacity="0.92"/>
+
+  <!-- Hill layer 3 — near, darkest -->
+  <path d="M0,748 C110,718 200,706 300,720 C400,734 450,744 550,730
+           C650,716 715,700 820,716 C925,732 1000,748 1110,736
+           C1220,724 1340,704 1440,714 L1440,900 L0,900 Z"
+        fill="#060f06"/>
+
+  <!-- Pine trees — near hill, left cluster -->
+  <g fill="#040b04">
+    <polygon points="110,718 122,672 134,718"/>
+    <polygon points="122,710 138,655 154,710"/>
+    <polygon points="136,716 148,668 160,716"/>
+    <polygon points="152,720 162,680 172,720"/>
+  </g>
+
+  <!-- Pine trees — near hill, center-left -->
+  <g fill="#040b04">
+    <polygon points="540,728 550,690 560,728"/>
+    <polygon points="552,722 564,676 576,722"/>
+  </g>
+
+  <!-- Pine trees — near hill, right cluster -->
+  <g fill="#040b04">
+    <polygon points="1180,720 1194,670 1208,720"/>
+    <polygon points="1196,714 1212,658 1228,714"/>
+    <polygon points="1212,722 1224,675 1236,722"/>
+    <polygon points="1228,718 1240,672 1252,718"/>
+    <polygon points="1244,724 1254,684 1264,724"/>
+  </g>
+
+  <!-- Ground -->
+  <rect x="0" y="830" width="1440" height="70" fill="#050d05"/>
+</svg>
